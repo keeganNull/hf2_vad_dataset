@@ -19,6 +19,7 @@ def extracting_flows(dataset, dataset_name, of_save_dir):
     WIDTH, HEIGHT = FLOWNET_INPUT_WIDTH[dataset_name], FLOWNET_INPUT_HEIGHT[dataset_name]
     config_file = '/home/ad/hzj/hf2vad-master/pre_process/assets/flownet2_8x1_slong_flyingchairs_384x448_20220625_212801-88d61800.py'
     checkpoint_file = '/data1/hzj_1/model/flownet2_8x1_slong_flyingchairs_384x448_20220625_212801-88d61800.pth'
+    #download file from https://github.com/open-mmlab/mmflow/blob/master/configs/flownet2/README.md
     flownet2 = init_model(config_file, checkpoint_file, device='cuda:5')
     #path = './assets/FlowNet2_checkpoint.pth.tar'
     #pretrained_dict = torch.load(path)['state_dict']
